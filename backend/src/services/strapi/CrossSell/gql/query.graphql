@@ -1,0 +1,12 @@
+#import "./fragments/CrossSellFragment.graphql"
+
+query CrossSellById($id: ID!) {
+    crossSell(id: $id) {
+        data {
+            id
+            attributes {
+                ...CrossSellFragment
+            }
+        }
+    }
+}

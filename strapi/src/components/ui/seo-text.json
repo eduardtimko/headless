@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_ui_seo_texts",
+  "info": {
+    "displayName": "SeoText",
+    "icon": "address-book"
+  },
+  "options": {},
+  "attributes": {
+    "seoText": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::seo-text.seo-text"
+    }
+  }
+}

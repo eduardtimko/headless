@@ -1,0 +1,5 @@
+#import "../../productById/gql/types.graphql"
+
+type ProductsById {
+    nodes: [Product]
+}

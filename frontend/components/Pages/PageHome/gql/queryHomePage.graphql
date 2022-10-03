@@ -1,0 +1,19 @@
+#import "../../../CrossSell/hooks/gql/fragment.graphql"
+#import "../../../PushProduct/hooks/gql/fragment.graphql"
+#import "../../../SeoText/hooks/gql/fragment.graphql"
+
+query HomePage($country: String) {
+  homePage(country: $country) {
+    components {
+      ... on ComponentUiCrossSell {
+        ...CrossSellFragment
+      }
+      ... on ComponentUiPushProduct {
+        ...PushProductFragment
+      }
+      ... on ComponentUiSeoText {
+        ...SeoTextFragment
+      }
+    }
+  }
+}

@@ -1,0 +1,3 @@
+query getCountryCode {
+    countryCode @client
+}

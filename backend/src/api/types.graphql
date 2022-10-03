@@ -1,0 +1,9 @@
+#import "../services/shopify/collectionByHandle/gql/types.graphql"
+#import "../services/shopify/productsById/gql/types.graphql"
+#import "../services/shopify/productById/gql/types.graphql"
+
+
+#import "./crossSell/types.graphql"
+#import "./pushProduct/types.graphql"
+#import "./seoText/types.graphql"
+#import "./homePage/types.graphql"

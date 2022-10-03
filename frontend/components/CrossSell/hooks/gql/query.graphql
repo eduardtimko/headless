@@ -1,0 +1,7 @@
+#import "./fragment.graphql"
+
+query CrossSell($id: ID!, $count: Int, $country: String) {
+    crossSell(id: $id, count: $count, country: $country) {
+        ...CrossSellFragment
+    }
+}

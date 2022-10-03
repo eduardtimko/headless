@@ -1,0 +1,17 @@
+type PushProduct {
+    title: String!
+    productId: String!
+}
+
+type PushProductEntity {
+    id: ID!
+    attributes: PushProduct!
+}
+
+type PushProductEntityResponse {
+    data: PushProductEntity!
+}
+
+type ComponentUiPushProduct {
+    pushProduct: PushProductEntityResponse!
+}

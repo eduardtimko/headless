@@ -1,0 +1,7 @@
+#import "./fragment-full.graphql"
+
+query PushProduct($id: ID!, $country: String) {
+    pushProduct(id: $id, country: $country) {
+        ...PushProductFullFragment
+    }
+}

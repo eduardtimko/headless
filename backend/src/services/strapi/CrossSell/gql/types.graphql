@@ -1,0 +1,18 @@
+type CrossSell {
+    title: String!
+    handle: String!,
+    default_count: Int!
+}
+
+type CrossSellEntity {
+    id: ID!
+    attributes: CrossSell!
+}
+
+type ComponentEntityResponse {
+    data: CrossSellEntity!
+}
+
+type ComponentUiCrossSell {
+    crossSell: ComponentEntityResponse!
+}

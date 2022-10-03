@@ -1,0 +1,20 @@
+#import "../../productById/gql/types.graphql"
+
+type CollectionByHandleMetaData {
+    hasNextPage: Boolean!
+}
+
+type CollectionByHandleEntity {
+    node: Product!
+}
+
+type CollectionByHandleResponse {
+    pageInfo: CollectionByHandleMetaData!
+    edges: [CollectionByHandleEntity!]!
+}
+
+type CollectionByHandle {
+    title: String!
+    description: String!
+    products: CollectionByHandleResponse!
+}

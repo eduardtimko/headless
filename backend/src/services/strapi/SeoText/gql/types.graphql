@@ -1,0 +1,17 @@
+type SeoText {
+    title: String!
+    description: String!
+}
+
+type SeoTextEntity {
+    id: ID!
+    attributes: SeoText!
+}
+
+type SeoTextEntityResponse {
+    data: SeoTextEntity!
+}
+
+type ComponentUiSeoText {
+    seoText: SeoTextEntityResponse!
+}

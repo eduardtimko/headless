@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_ui_push_products",
+  "info": {
+    "displayName": "PushProduct",
+    "icon": "ad",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "pushProduct": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::push-product.push-product"
+    }
+  }
+}

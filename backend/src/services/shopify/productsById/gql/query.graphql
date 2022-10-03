@@ -1,0 +1,10 @@
+#import "../../productById/gql/fragments/ProductFragment.graphql"
+
+
+query ProductsById($ids: [ID!]!) {
+    nodes(ids: $ids) {
+        ... on Product {
+            ...ProductFragment
+        }
+    }
+}

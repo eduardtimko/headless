@@ -1,0 +1,33 @@
+fragment PushProductFullFragment on ComponentUiPushProduct {
+    pushProduct {
+        data {
+            id
+            attributes {
+                title
+                productId
+                shopify {
+                    product {
+                        description
+                        handle
+                        title
+                        media {
+                            edges {
+                                node {
+                                    image {
+                                        url
+                                    }
+                                }
+                            }
+                        }
+                        priceRange {
+                            minVariantPrice {
+                                amount
+                                currencyCode
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+#import "./MoneyFragment.graphql"
+#import "./ImageFragment.graphql"
+
+fragment VariantFragment on ProductVariant {
+    id
+    title
+    availableForSale
+    image {
+        ...ImageFragment
+    }
+    priceV2 {
+        ...MoneyFragment
+    }
+    compareAtPriceV2 {
+        ...MoneyFragment
+    }
+    selectedOptions {
+        name
+        value
+    }
+}

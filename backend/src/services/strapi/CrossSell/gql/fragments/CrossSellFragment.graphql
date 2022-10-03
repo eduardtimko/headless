@@ -1,0 +1,5 @@
+fragment CrossSellFragment on CrossSell {
+    handle
+    title
+    default_count
+}

@@ -1,0 +1,8 @@
+#import "./ImageFragment.graphql"
+
+fragment MediaFragment on MediaImage {
+    mediaContentType
+    image {
+        ...ImageFragment
+    }
+}

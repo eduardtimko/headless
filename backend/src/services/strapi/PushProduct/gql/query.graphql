@@ -1,0 +1,12 @@
+#import "./fragments/PushProductFragment.graphql"
+
+query PushProductById($id: ID!) {
+    pushProduct(id: $id) {
+        data {
+            id
+            attributes {
+                ...PushProductFragment
+            }
+        }
+    }
+}

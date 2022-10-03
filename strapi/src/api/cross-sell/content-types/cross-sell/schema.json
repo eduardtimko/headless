@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cross_sells",
+  "info": {
+    "singularName": "cross-sell",
+    "pluralName": "cross-sells",
+    "displayName": "CrossSell",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "handle": {
+      "type": "string"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "strapi",
+        "shopify-collection",
+        "shopify-product"
+      ],
+      "required": true,
+      "default": "shopify-collection"
+    },
+    "title": {
+      "type": "string"
+    },
+    "default_count": {
+      "type": "integer",
+      "required": true,
+      "default": 2
+    }
+  }
+}

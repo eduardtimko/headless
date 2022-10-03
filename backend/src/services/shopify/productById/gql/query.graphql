@@ -1,0 +1,7 @@
+#import "./fragments/ProductFragment.graphql"
+
+query ProductById($id: ID!, $country: CountryCode) @inContext(country: $country) {
+    product(id: $id) {
+        ...ProductFragment
+    }
+}

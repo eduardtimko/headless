@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "push_products",
+  "info": {
+    "singularName": "push-product",
+    "pluralName": "push-products",
+    "displayName": "PushProduct",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "productId": {
+      "type": "string"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "strapi",
+        "shopify-collection",
+        "shopify-product"
+      ],
+      "default": "shopify-product",
+      "required": true
+    },
+    "title": {
+      "type": "string"
+    }
+  }
+}

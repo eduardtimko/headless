@@ -1,0 +1,19 @@
+#import "../../productById/gql/fragments/ProductFragment.graphql"
+
+query CollectionByHandle($handle: String, $productsCount: Int, $country: CountryCode) @inContext(country: $country) {
+    collection(handle: $handle)  {
+        id
+        title
+        description
+        products(first: $productsCount) {
+            pageInfo {
+                hasNextPage
+            }
+            edges {
+                node {
+                    ...ProductFragment
+                }
+            }
+        }
+    }
+}

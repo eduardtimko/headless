@@ -1,0 +1,7 @@
+#import "./fragment.graphql"
+
+query SeoText($id: ID!) {
+    seoText(id: $id) {
+        ...SeoTextFragment
+    }
+}

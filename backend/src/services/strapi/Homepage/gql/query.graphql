@@ -1,0 +1,35 @@
+#import "../../CrossSell/gql/fragments/CrossSellFragment.graphql"
+#import "../../PushProduct/gql/fragments/PushProductFragment.graphql"
+#import "../../SeoText/gql/fragments/SeoTextFragment.graphql"
+
+query HomePage{
+    homepage {
+        data {
+            attributes {
+                components {
+                    ... on ComponentUiCrossSell {
+                        crossSell {
+                            data {
+                                id
+                            }
+                        }
+                    }
+                    ... on ComponentUiPushProducts {
+                        pushProduct {
+                            data {
+                                id
+                            }
+                        }
+                    }
+                    ... on ComponentUiSeoText {
+                        seoText {
+                            data {
+                                id
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

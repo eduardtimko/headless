@@ -1,0 +1,4 @@
+fragment PushProductFragment on PushProduct {
+    productId
+    title
+}

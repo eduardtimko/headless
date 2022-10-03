@@ -1,0 +1,11 @@
+fragment SeoTextFragment on ComponentUiSeoText {
+    seoText {
+        data {
+            id
+            attributes {
+                title
+                description
+            }
+        }
+    }
+}

@@ -1,0 +1,4 @@
+fragment SeoTextFragment on SeoText {
+    title
+    description
+}

@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_ui_cross_sells",
+  "info": {
+    "displayName": "CrossSell",
+    "icon": "align-justify",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "crossSell": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cross-sell.cross-sell"
+    }
+  }
+}

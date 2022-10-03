@@ -1,0 +1,41 @@
+#import "./MoneyFragment.graphql"
+#import "./VariantFragment.graphql"
+#import "./MediaFragment.graphql"
+
+fragment ProductFragment on Product {
+  descriptionHtml,
+  description,
+  handle,
+  id,
+  title,
+  compareAtPriceRange {
+    maxVariantPrice {
+      ...MoneyFragment
+    }
+    minVariantPrice {
+      ...MoneyFragment
+    }
+  }
+  priceRange {
+    maxVariantPrice {
+      ...MoneyFragment
+    }
+    minVariantPrice {
+      ...MoneyFragment
+    }
+  },
+  media(first: 100) {
+    edges {
+      node {
+          ...MediaFragment
+      }
+    }
+  },
+  variants(first: 100) {
+    edges {
+       node {
+         ...VariantFragment
+       }
+    }
+  }
+}

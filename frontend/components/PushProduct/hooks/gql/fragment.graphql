@@ -1,0 +1,18 @@
+fragment PushProductFragment on ComponentUiPushProduct {
+    pushProduct {
+        data {
+            id
+            attributes {
+                title
+                productId
+                shopify {
+                    product {
+                        description
+                        handle
+                        title
+                    }
+                }
+            }
+        }
+    }
+}

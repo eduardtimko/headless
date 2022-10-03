@@ -1,0 +1,70 @@
+type PriceType {
+    currencyCode: String!
+    amount: Int!
+}
+
+type CompareAtPriceRangeType {
+    maxVariantPrice: PriceType!
+    minVariantPrice : PriceType!
+}
+
+type PriceRangeType {
+    maxVariantPrice: PriceType!
+    minVariantPrice : PriceType!
+}
+
+type Image {
+    id: ID!
+    url: String!
+    altText: String!
+    width: Int!
+    height: Int!
+}
+
+type Media {
+    mediaContentType: String!
+    image: Image!
+}
+
+type MediaEntity {
+    node: Media!
+}
+
+type MediaResponse {
+    edges: [MediaEntity!]!
+}
+
+type Option {
+    name: String!
+    value: String!
+}
+
+type Variant {
+    id: ID!
+    title: String!
+    availableForSale: Boolean!
+    image: Image!
+    priceV2: PriceType!
+    compareAtPriceV2: PriceType!
+    selectedOptions: [Option!]!
+}
+
+type VariantsEntity {
+    node: Variant!
+}
+
+type VariantsResponse {
+    edges: VariantsEntity!
+}
+
+type Product {
+    descriptionHtml: String!
+    title: String!
+    description: String!
+    handle: String!
+    id: ID!
+    compareAtPriceRange: CompareAtPriceRangeType!
+    priceRange: PriceRangeType!
+    media: MediaResponse!
+    variants: VariantsResponse!
+}

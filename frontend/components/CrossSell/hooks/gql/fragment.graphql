@@ -1,0 +1,41 @@
+fragment CrossSellFragment on ComponentUiCrossSell {
+    crossSell {
+        data {
+            id
+            attributes {
+                title
+                handle
+                default_count
+                shopify {
+                    products {
+                        pageInfo {
+                            hasNextPage
+                        }
+                        edges {
+                            node {
+                                handle
+                                title
+                                description
+                                media {
+                                    edges {
+                                        node {
+                                            image {
+                                                url
+                                            }
+                                        }
+                                    }
+                                }
+                                priceRange {
+                                    minVariantPrice {
+                                        amount
+                                        currencyCode
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

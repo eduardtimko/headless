@@ -1,4 +1,4 @@
-#import "../../services/strapi/PushProduct/gql/types.graphql"
+#import "../../../services/strapi/PushProduct/gql/types.graphql"
 
 type PushProductResponse {
     product: Product

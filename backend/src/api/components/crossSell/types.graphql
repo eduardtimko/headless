@@ -1,0 +1,5 @@
+#import "../../../services/strapi/CrossSell/gql/types.graphql"
+
+extend type CrossSell {
+    shopify: CollectionByHandle
+}

@@ -2,10 +2,10 @@
 import produce from "immer";
 
 //Shopify
-import { pushProductById } from "../../services/strapi/PushProduct";
+import { pushProductById } from "../../../services/strapi/PushProduct";
 
 //Shopify
-import { productById } from "../../services/shopify/productById";
+import { productById } from "../../../services/shopify/productById";
 
 export const pushProduct = async (_, { id, country }) => {
   const data = await pushProductById(id);

@@ -2,10 +2,10 @@
 import produce from "immer";
 
 //Strapi
-import { crossSellById } from "../../services/strapi/CrossSell";
+import { crossSellById } from "../../../services/strapi/CrossSell";
 
 //Shopify
-import { collectionByHandle } from "../../services/shopify/collectionByHandle";
+import { collectionByHandle } from "../../../services/shopify/collectionByHandle";
 
 export const crossSell = async (_, { id, count, country }) => {
   const data = await crossSellById(id);

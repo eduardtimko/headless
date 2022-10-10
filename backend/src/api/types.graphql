@@ -3,7 +3,7 @@
 #import "../services/shopify/productById/gql/types.graphql"
 
 
-#import "./crossSell/types.graphql"
-#import "./pushProduct/types.graphql"
-#import "./seoText/types.graphql"
-#import "./homePage/types.graphql"
+#import "./components/crossSell/types.graphql"
+#import "./components/pushProduct/types.graphql"
+#import "./components/seoText/types.graphql"
+#import "./pages/homePage/types.graphql"

@@ -1,9 +1,0 @@
-#import "../../services/strapi/PushProduct/gql/types.graphql"
-
-type PushProductResponse {
-    product: Product
-}
-
-extend type PushProduct {
-    shopify: PushProductResponse
-}

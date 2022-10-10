@@ -1,6 +1,5 @@
 //Query
-import { pageQueries } from "../api/pages/pageQueries";
-import { componentQueries } from "../api/components/componentQueries";
+import { queries as apiQueries } from "../api/queries";
 
 export const resolvers = {
   HomepageComponentsDynamicZone: {
@@ -18,7 +17,6 @@ export const resolvers = {
     },
   },
   Query: {
-    ...pageQueries,
-    ...componentQueries
+    ...apiQueries,
   },
 };

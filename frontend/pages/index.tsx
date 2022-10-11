@@ -2,7 +2,7 @@
 import PageHome from "../components/Pages/PageHome"
 
 //GraphQL
-import { initializeApollo } from "../services/apollo/instance";
+import { initializeApollo } from "../services/apollo/instance"
 import queryHomePage from "../components/Pages/PageHome/gql/queryHomePage.graphql"
 
 //TypeScript

@@ -1,6 +1,6 @@
 //Core
 import { useState } from "react"
-import useDidMountEffect from "../../../hooks/useDidMountEffect";
+import useDidMountEffect from "../../../hooks/useDidMountEffect"
 
 //GraphGl
 import querySeoText from "./gql/query.graphql"

@@ -19,9 +19,6 @@ const nextConfig = {
     })
     return config
   },
-  eslint: {
-    ignoreDuringBuilds: true, // TEMP
-  },
   webpackDevMiddleware: (config) => {
     return config
   },

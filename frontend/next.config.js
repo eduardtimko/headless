@@ -1,8 +1,6 @@
 /**
  * @type {import('next').NextConfig}
  */
-const { createVanillaExtractPlugin } = require("@vanilla-extract/next-plugin")
-const withVanillaExtract = createVanillaExtractPlugin()
 const nextConfig = {
   images: {
     loader: "default",
@@ -21,9 +19,16 @@ const nextConfig = {
     })
     return config
   },
+  eslint: {
+    ignoreDuringBuilds: true, // TEMP
+  },
   webpackDevMiddleware: (config) => {
     return config
   },
 }
 
-module.exports = withVanillaExtract(nextConfig)
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true',
+})
+
+module.exports = withBundleAnalyzer(nextConfig)

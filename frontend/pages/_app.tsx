@@ -8,9 +8,6 @@ import { countryCode } from "../services/apollo/cache/vars"
 //TypeScript
 import type { AppProps } from "next/app"
 
-//Style
-import "../styles/global.css"
-
 const App = ({ Component, pageProps }: AppProps) => {
   const apolloClient = useApollo(pageProps.initialApolloState)
   return (

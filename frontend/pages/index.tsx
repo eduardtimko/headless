@@ -1,18 +1,17 @@
 //Core
-import PageHome from "../components/Pages/PageHome"
+import HomePage from "../components/Pages/HomePage"
 
 //GraphQL
-import { initializeApollo } from "../services/apollo/instance";
-import queryHomePage from "../components/Pages/PageHome/gql/queryHomePage.graphql"
+import { initializeApollo } from "../services/apollo/instance"
+import queryHomePage from "../components/Pages/HomePage/gql/queryHomePage.graphql"
 
 //TypeScript
-import { HomePage } from "../generated"
+import { HomePage as THomePage } from "../generated"
 
-// @ts-ignore
-const Home: ({ homePage }: { homePage: HomePage }) => JSX.Element = ({
+const Home: ({ homePage }: { homePage: THomePage }) => JSX.Element = ({
   homePage,
 }) => {
-  return <PageHome components={homePage.components} />
+  return <HomePage components={homePage.components} />
 }
 
 export async function getStaticProps() {

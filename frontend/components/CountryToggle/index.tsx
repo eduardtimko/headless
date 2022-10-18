@@ -1,31 +1,43 @@
-import { MouseEvent } from "react"
+//Core
+import { useCallback, useState } from "react"
 import useCountry from "../../hooks/useCountry"
+import useDidMountEffect from "../../hooks/useDidMountEffect"
 
-const CountryToggle = () => {
+const CountryToggle = ({ country, availableCountries }) => {
+  const [selectCountry, setSelectCountry] = useState(country)
   const { countryCode, toggleCountryCode } = useCountry()
+
+  const handleChange = useCallback(
+    ({ target }) => {
+      toggleCountryCode(
+        availableCountries.find((item) => item.isoCode === target.value).isoCode
+      )
+    },
+    [selectCountry, availableCountries]
+  )
+
+  useDidMountEffect(() => {
+    setSelectCountry(
+      availableCountries.find((item) => item.isoCode === countryCode)
+    )
+  }, [countryCode])
+
   return (
-    <>
-      <button
-        style={{ color: countryCode === "US" ? "red" : "black" }}
-        value="US"
-        onClick={(event: MouseEvent<HTMLButtonElement>) => {
-          const value = (event.target as HTMLButtonElement).value
-          toggleCountryCode(value)
-        }}
-      >
-        US
-      </button>
-      <button
-        style={{ color: countryCode === "RU" ? "red" : "black" }}
-        value="RU"
-        onClick={(event: MouseEvent<HTMLButtonElement>) => {
-          const value = (event.target as HTMLButtonElement).value
-          toggleCountryCode(value)
-        }}
-      >
-        RU
-      </button>
-    </>
+    <select defaultValue={selectCountry.isoCode} onChange={handleChange}>
+      {availableCountries?.map((item) => {
+        return (
+          <option
+            key={item.isoCode}
+            value={item.isoCode}
+            style={{
+              color: selectCountry.isoCode === item.isoCode ? "red" : "black",
+            }}
+          >
+            {item.name}
+          </option>
+        )
+      })}
+    </select>
   )
 }
 

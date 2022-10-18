@@ -1,6 +1,7 @@
 #import "../api/types.graphql"
 
 type Query {
+    getCountries: Countries!
     homePage(country: String): HomePage!
     crossSell(id: ID!, count: Int, country: String): ComponentUiCrossSell!
     pushProduct(id: ID!, country: String): ComponentUiPushProduct!

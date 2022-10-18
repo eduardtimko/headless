@@ -9,8 +9,8 @@ type TComponents = {
   components?: Maybe<Array<Maybe<HomepageComponentsDynamicZone>>>
 }
 
-const PageHome: FC<TComponents> = ({ components }) => {
+const HomePage: FC<TComponents> = ({ components }) => {
   return <DynamicComponent components={components} />
 }
 
-export default PageHome
+export default HomePage

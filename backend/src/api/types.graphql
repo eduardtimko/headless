@@ -6,4 +6,5 @@
 #import "./components/crossSell/types.graphql"
 #import "./components/pushProduct/types.graphql"
 #import "./components/seoText/types.graphql"
+#import "./components/countries/types.graphql"
 #import "./pages/homePage/types.graphql"

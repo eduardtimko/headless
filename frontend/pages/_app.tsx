@@ -1,9 +1,9 @@
 //Core
-import { ApolloProvider } from "@apollo/client"
-import { useApollo } from "../hooks/useApollo"
-import CountryToggle from "../components/CountryToggle"
-import { useEffect, useLayoutEffect } from "react"
-import { countryCode } from "../services/apollo/cache/vars"
+import AppPage from "../components/Pages/AppPage"
+
+//GraphGl
+import { initializeApollo } from "../services/apollo/instance"
+import queryCountries from "../components/Pages/AppPage/gql/queryCountries.graphql"
 
 //TypeScript
 import type { AppProps } from "next/app"
@@ -12,14 +12,24 @@ import type { AppProps } from "next/app"
 import "../styles/global.css"
 
 const App = ({ Component, pageProps }: AppProps) => {
-  const apolloClient = useApollo(pageProps.initialApolloState)
   return (
-    <ApolloProvider client={apolloClient}>
-      <CountryToggle />
-      <hr />
+    <AppPage pageProps={pageProps}>
       <Component {...pageProps} />
-    </ApolloProvider>
+    </AppPage>
   )
+}
+
+App.getInitialProps = async () => {
+  const apolloClient = initializeApollo()
+  const { data } = await apolloClient.query({
+    query: queryCountries,
+  })
+  return {
+    pageProps: {
+      country: data.getCountries.country,
+      availableCountries: data.getCountries.availableCountries,
+    },
+  }
 }
 
 export default App

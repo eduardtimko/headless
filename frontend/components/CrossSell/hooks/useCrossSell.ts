@@ -34,9 +34,9 @@ export const useCrossSell = (id: string, shopify: CollectionByHandle) => {
   }, [countryCode])
 
   useDidMountEffect(() => {
-    if (!data) return;
+    if (!data) return
     setLoading(false)
-    setProducts(data.crossSell.crossSell.data.attributes.shopify.products)
+    setProducts(data?.crossSell?.crossSell?.data?.attributes?.shopify?.products)
   }, [data])
 
   const loadingProducts = useCallback(

@@ -1,6 +1,6 @@
 type PriceType {
     currencyCode: String!
-    amount: Int!
+    amount: Float!
 }
 
 type CompareAtPriceRangeType {

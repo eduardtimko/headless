@@ -1,0 +1,9 @@
+type CountriesResponse {
+    name: String!
+    isoCode: String!
+}
+
+type Countries {
+    availableCountries: [CountriesResponse!]!
+    country: CountriesResponse!
+}

@@ -1,0 +1,12 @@
+query Countries {
+    getCountries {
+        availableCountries {
+            isoCode
+            name
+        }
+        country {
+            isoCode
+            name
+        }
+    }
+}

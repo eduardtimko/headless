@@ -13,6 +13,9 @@
     "apollo:download-schema": "apollo schema:download --endpoint http://localhost:5000",
     "codegen": "graphql-codegen --config codegen.yml"
   },
+  "engines": {
+    "node": ">=18"
+  },
   "dependencies": {
     "@apollo/client": "^3.5.10",
     "@apollo/react-hooks": "^4.0.0",

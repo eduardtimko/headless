@@ -8,7 +8,7 @@ import { countryCode } from "../services/apollo/cache/vars"
 //TypeScript
 import type { AppProps } from "next/app"
 
-//Style
+//Styles
 import "../styles/global.css"
 
 const App = ({ Component, pageProps }: AppProps) => {

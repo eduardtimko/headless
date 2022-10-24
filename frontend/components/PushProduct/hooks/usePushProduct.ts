@@ -14,7 +14,6 @@ import {
   PushProductResponse,
 } from "../../../generated"
 
-
 type TPushProductResponse = {
   pushProduct: ComponentUiPushProduct
 }

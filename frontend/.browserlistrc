@@ -1,0 +1,2 @@
+extends @shopify/browserslist-config
+ios >= 13.3
